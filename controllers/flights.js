@@ -1,4 +1,3 @@
-
 const Flight = require('../models/flight');
 module.exports = {
     index,
@@ -22,9 +21,33 @@ function create(req, res) {
         res.redirect('/flights');
     });
 }
-
 function show(req, res) {
-  Flight.findById(req.params.id, function(err, flight) {
-      res.render('flights/show', {flight})
-  });
+    Flight.findById(req.params.id, function(err, flight) {
+        console.log()
+        res.render('flights/show', { flight })
+    });
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

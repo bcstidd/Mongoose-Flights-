@@ -29,8 +29,33 @@
       <td><%= f.arrival ? f.arrival : 'None' %></td>
   </tr>
   <% }); %>
-</table>
+  <table class="seat-list">
+    <thead>
+      <tr>
+        <th>Unavailable Seats</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% tickets.forEach(function(t) { %>
+        <tr>
+          <td><%= t.seat %></td>
+        </tr>
+      <% } %>
+    </tbody>
+  </table>
+  <% flight.tickets.forEach(function(t) { %>
+    <tr>
+        <td><%= t.flight ? t.flight : 'None' %></td>
+    
+    </tr>
+    <% }); %> -->
+</table> 
 </section>
+<form id="add-ticket-form" action="/tickets" method="POST">
+  <label>Seat Number:</label>
+  <input name="seat" required pattern="[A-F][1-9]\d?">
+  <input type="submit" value="Add Ticket">
+</form>
 <br><br>
 <h2>Destinations</h2>
 <form id="add-destination-form" method="POST"

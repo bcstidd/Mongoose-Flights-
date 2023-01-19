@@ -1,4 +1,5 @@
 const Flight = require('../models/flight');
+const Ticket = require('../controllers/flights');
 module.exports = {
     index,
     new: newFlight,

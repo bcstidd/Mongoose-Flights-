@@ -10,8 +10,8 @@ a {
 table {
   display: flex;
   flex-direction: column;
-  /* /* flex-wrap: wrap; */
-  justify-content: space-around; 
+  flex-wrap: wrap;
+  /* justify-content: center;  */
   width: 90%;
   color: green;
 }
@@ -21,14 +21,6 @@ thead>tr {
   justify-content: space-around;
   align-self: flex-end;
   color: red;
-}
-/* tbody>tr>td {
-  display: flex;
-  justify-content: flex-start;
-  align-items: flex-start;  
-} */
 
-#rows {
-  background-color: aquamarine;
-}
+
 

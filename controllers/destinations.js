@@ -7,7 +7,7 @@ function create(req, res) {
         flight.destinations.push(req.body)
         // console.log(flight.destinations)
         flight.save(function(err) {
-            res.redirect(`/flights/${flight._id}`)
+            res.redirect(`/flight/${flight._id}`)
         })
     })
 }
